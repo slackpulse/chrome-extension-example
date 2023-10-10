@@ -7,7 +7,15 @@
   "action": {
     "default_title": "execute.js will run (watch the Chrome DevTools' console)"
   },
-  "content_scripts": [],
+  "content_scripts": [
+    {
+      "run_at" : "document_end",
+      "js": ["prepare.js"],
+      "matches": [
+        "https://animestore.docomo.ne.jp/*"
+      ]
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   },
