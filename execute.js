@@ -1,7 +1,5 @@
 const video = document.querySelector("#video")
 const showInfo = function(event) {
-  console.log(event)
-
   const backInfoTxt1 = document.querySelector(".backInfoTxt1")
   const backInfoTxt2 = document.querySelector(".backInfoTxt2")
   const backInfoTxt3 = document.querySelector(".backInfoTxt3")
@@ -11,6 +9,6 @@ const showInfo = function(event) {
   console.log(`backInfoTxt3: ${backInfoTxt3.textContent}`)
 }
 
-video.addEventListener('play', showInfo)
-video.addEventListener('pause', showInfo)
 video.addEventListener('ended', showInfo)
+
+showInfo()
