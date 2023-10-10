@@ -1,4 +1,4 @@
-const video = documernt.querySelector("#video")
+const video = document.querySelector("#video")
 const showInfo = function(event) {
   console.log(event)
 
