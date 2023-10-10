@@ -12,6 +12,5 @@ const showInfo = function(event) {
 }
 
 video.addEventListener('play', showInfo)
+video.addEventListener('pause', showInfo)
 video.addEventListener('ended', showInfo)
-video.addEventListener('loadeddata', showInfo)
-video.addEventListener('loadedmetadata', showInfo)
