@@ -1,15 +1,7 @@
-// https://animestore.docomo.ne.jp/animestore/tp_pc
-const targets = document.querySelectorAll('ul.newsBlock.news')
-for (const target of targets) {
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(function(node) {
-        console.log(node.textContent)
-      })
-    });
-  })
-  const options = {
-    childList: true,
-  }
-  observer.observe(target, options);
-}
+const backInfoTxt1 = document.querySelector(".backInfoTxt1")
+const backInfoTxt2 = document.querySelector(".backInfoTxt2")
+const backInfoTxt3 = document.querySelector(".backInfoTxt3")
+
+console.log(`backInfoTxt1: ${backInfoTxt1.textContent}`)
+console.log(`backInfoTxt2: ${backInfoTxt2.textContent}`)
+console.log(`backInfoTxt3: ${backInfoTxt3.textContent}`)
