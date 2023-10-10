@@ -1,5 +1,7 @@
-const viddeo = documernt.querySelector("#video")
-video.addEventListener('ended', (e) => {
+const video = documernt.querySelector("#video")
+const showInfo = function(event) {
+  console.log(event)
+
   const backInfoTxt1 = document.querySelector(".backInfoTxt1")
   const backInfoTxt2 = document.querySelector(".backInfoTxt2")
   const backInfoTxt3 = document.querySelector(".backInfoTxt3")
@@ -7,5 +9,9 @@ video.addEventListener('ended', (e) => {
   console.log(`backInfoTxt1: ${backInfoTxt1.textContent}`)
   console.log(`backInfoTxt2: ${backInfoTxt2.textContent}`)
   console.log(`backInfoTxt3: ${backInfoTxt3.textContent}`)
-})
+}
 
+video.addEventListener('play', showInfo)
+video.addEventListener('ended', showInfo)
+video.addEventListener('loadeddata', showInfo)
+video.addEventListener('loadedmetadata', showInfo)
